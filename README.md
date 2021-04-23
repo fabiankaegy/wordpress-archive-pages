@@ -1,5 +1,5 @@
 # wordpress-archive-pages
-This is an exploration into how archive pages could tie in better into editable areas in WordPress. Like the Post Page
+This is an exploration into how archive pages could tie in better into editable areas in WordPress. Like the Blog page. **This is very much an early exporation that might not go anywhere**
 
 ## The Problem Currently:
 In many projects I have been involved with I have seen the need from design / clients to have more controll over archive pages. This gets resolved by either creating a page template that replaces the archive page, or by creating a Custom Post Type called "Acive Pages" that allows editors to create pages where they can manage the content of the archive page. 
