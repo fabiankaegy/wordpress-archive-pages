@@ -11,3 +11,8 @@ In WordPress core there is a toggle in the settings and in the cusomizer to chos
 This would allow editors to have more controll over Archive pages and for example set meta values, change the permalink. This then also allows theme developers to add more capabilities to archive pages. By default the editor would be dissabled like it is of the blog page, but in theory archives could make use of that content and add it above / beneath the content. Or use a featured image for a header. 
 
 In the admin this would also add some text after the page title in the post table like the blog page or privacy page do.
+
+## The Approach: 
+The Post status can get added to the admin table by using the [`display_post_states`](https://developer.wordpress.org/reference/hooks/display_post_states/) hook.
+
+The admin general settings should show a select element for each post type that is both public an has an archive.
