@@ -43,16 +43,17 @@ function add_setting_for_post_type( $post_type ) {
 			?>
 			<label for="page_for_<?php echo esc_attr( $post_type_slug ); ?>">
 			<?php
+			/*
+			 * translators: %1$s: Post Type for which the archive Page gets selected.
+			 * translators: %2$s: Select field to choose the page for posts.
+			 */
+			$title = __( '%1$s Archive page: %2$s' );
 			printf(
-				/*
-				 * translators: %1$s: Post Type for which the archive Page gets selected.
-				 * translators: %2$s: Select field to choose the page for posts.
-				 */
-				__( '%1$s Archive page: %2$s' ),
+				esc_attr( $title ),
 				esc_html( $post_type_label ),
-				wp_dropdown_pages(
+				wp_dropdown_pages( /* phpcs:ignore */
 					array(
-						'name'              => "archive_page_for_$post_type_slug",
+						'name'              => esc_attr( "archive_page_for_$post_type_slug" ),
 						'echo'              => 0,
 						'show_option_none'  => __( '&mdash; Select &mdash;' ),
 						'option_none_value' => '0',
